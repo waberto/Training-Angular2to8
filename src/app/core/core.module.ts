@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [HeaderComponent, NavComponent, FooterComponent],
   imports: [
-CommonModule,
+  CommonModule,
   TextModule,
   RouterModule
   ],

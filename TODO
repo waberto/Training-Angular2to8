@@ -4,7 +4,7 @@
 ✔ components intelligents vs components stupides @done(20-07-21 11:27)
 ✔ router config
 ✔ lazy loading
-☐ modules routing
+✔ modules routing
 ☐ enable tracing
 ☐ router events
 ☐
