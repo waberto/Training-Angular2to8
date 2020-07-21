@@ -5,6 +5,6 @@
 ✔ router config
 ✔ lazy loading
 ✔ modules routing
-☐ enable tracing
-☐ router events
+✔ enable tracing
+✔router events
 ☐
