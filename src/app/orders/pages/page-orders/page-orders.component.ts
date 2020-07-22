@@ -14,10 +14,10 @@ export class PageOrdersComponent implements OnInit {
     this.os.collection.subscribe(
       (datas) => {
         this.collection = datas;
-        console.log(this.collection);
+        // console.log(this.collection);
       }
     );
-    console.log(this.collection);
+    // console.log(this.collection);
     this.headers = [
       'Type',
       'Client',
