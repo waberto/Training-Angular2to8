@@ -6,5 +6,8 @@
 ✔ lazy loading
 ✔ modules routing
 ✔ enable tracing
-✔router events
-☐ Templates
+✔ router events
+✔ Templates
+✔ Pipe
+✔ Pipe perso
+☐ Directive perso
