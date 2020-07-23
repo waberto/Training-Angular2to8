@@ -38,4 +38,8 @@ export class PageOrdersComponent implements OnInit {
       item.state = res.state;
     });
   }
+
+  public popup() {
+    console.log('open popup');
+  }
 }

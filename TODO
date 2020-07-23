@@ -10,4 +10,32 @@
 ✔ Templates
 ✔ Pipe
 ✔ Pipe perso
-☐ Directive perso
+✔ Pipe async
+✔ Directive perso
+
+composants angular :
+
+modules => découper l'appli déclarer des composants, exporter des composants et des modules
+components => affichage => components intelligents vs components stupides
+pipes => class vocation à récupérer des datas en entrée et return ces datas transformés
+directives => éxécuter du js sur n'importe quel template html et n'importe quel html element du dom
+services => injection de dépendances par constructor qui permettent de partager des datas entre composants peut importe leur relation hierarchique
+enums
+interfaces
+models
+
+techniques :
+les transclusions avec ng-content => permet de projeter du html dans un template html
+les @Input() => permet de binder des datas d'un composant parent vers un composant enfant
+les services => permet de communiquer entre plusieurs composants
+les @Output() => permet de binder des datas d'un composant enfant vers un coomposant parent
+les property binding avec la syntaxe avec [] ou sans []
+l'event binding avec la syntaxe ()
+les appels http avec HttpClient => Observables()
+les router avec lazyloading et preloading strategy
+l'encapsulation => mode emulated et le None quand on veut avoir un fichier de composant avec des styles globaux
+
+
+life cycles :
+
+router events :
