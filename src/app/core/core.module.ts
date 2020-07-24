@@ -6,18 +6,21 @@ import { TextModule } from './../text/text.module';
 import { IconsModule } from './../icons/icons.module';
 import { UiModule } from './../ui/ui.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './components/header/header.component';
+
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../shared/shared.module';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [HeaderComponent, NavComponent, FooterComponent],
   imports: [
-  CommonModule,
+CommonModule,
   TextModule,
-  RouterModule
+  RouterModule,
+  SharedModule
   ],
   exports: [
     LoginModule,
