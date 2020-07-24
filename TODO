@@ -37,6 +37,9 @@
     ☐ souscrire à this.ts.theme$ pour affecter la valeur du subscribe à la variable theme
     ☐ dans le html sur la balise <app-ui> ajouter une [ngClass]="{'theme2': theme === 'theme2'}"
  
+☐ pipe async
+
+
     composants angular :
 
 modules => découper l'appli déclarer des composants, exporter des composants et des modules

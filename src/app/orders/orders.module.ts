@@ -4,11 +4,12 @@ import { PageOrdersComponent } from './pages/page-orders/page-orders.component';
 import { OrdersRoutingModule } from './orders-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { PageAddOrderComponent } from './pages/page-add-order/page-add-order.component';
+import { FormOrderComponent } from './components/form-order/form-order.component';
 
 
 
 @NgModule({
-  declarations: [PageOrdersComponent, PageAddOrderComponent],
+  declarations: [PageOrdersComponent, PageAddOrderComponent, FormOrderComponent],
   imports: [
     CommonModule,
     OrdersRoutingModule,
