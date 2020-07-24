@@ -6,6 +6,7 @@ import { LibraryModule } from './../library/library.module';
 import { TotalPipe } from './pipes/total.pipe';
 import { StateDirective } from './directives/state.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -20,7 +21,8 @@ CommonModule
     LibraryModule,
     TotalPipe,
     StateDirective,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ]
 })
 export class SharedModule { }

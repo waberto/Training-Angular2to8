@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OrdersService } from '../../services/orders.service';
 import { Order } from 'src/app/shared/models/order';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-page-orders',
   templateUrl: './page-orders.component.html',
@@ -12,17 +12,20 @@ export class PageOrdersComponent implements OnInit {
   public collection: Order[];
   public headers: string[];
   public states = Object.values(StateOrder);
-
-  constructor(private os: OrdersService) { }
+  constructor(
+    private os: OrdersService,
+    private router: Router
+  ) { }
   ngOnInit(): void {
     this.os.collection.subscribe(
       (datas) => {
         this.collection = datas;
-        // console.log(this.collection);
+        console.log(this.collection);
       }
     );
     // console.log(this.collection);
     this.headers = [
+      'Action',
       'Type',
       'Client',
       'NbJours',
@@ -38,8 +41,10 @@ export class PageOrdersComponent implements OnInit {
       item.state = res.state;
     });
   }
-
   public popup() {
     console.log('open popup');
+  }
+  public goToEdit(item: Order) {
+    this.router.navigate(['orders','edit', item.id]);
   }
 }

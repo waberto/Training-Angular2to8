@@ -5,7 +5,7 @@
       "nbJours": 5,
       "tva": 20,
       "state": "CANCELED",
-      "typePresta": "Formation2",
+      "typePresta": "Formation",
       "client": "Atos",
       "comment": "Comment pour Atos",
       "id": 4
@@ -55,7 +55,7 @@
       "nbJours": 1,
       "tva": 20,
       "state": "OPTION",
-      "typePresta": "a",
+      "typePresta": "arerzerze",
       "client": "aa",
       "comment": "sdfdsf",
       "id": 9
