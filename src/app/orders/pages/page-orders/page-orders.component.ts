@@ -3,13 +3,14 @@ import { OrdersService } from '../../services/orders.service';
 import { Order } from 'src/app/shared/models/order';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-page-orders',
   templateUrl: './page-orders.component.html',
   styleUrls: ['./page-orders.component.scss']
 })
 export class PageOrdersComponent implements OnInit {
-  public collection: Order[];
+  public collection$: BehaviorSubject<Order[]> = new BehaviorSubject(null);
   public headers: string[];
   public states = Object.values(StateOrder);
   constructor(
@@ -19,8 +20,7 @@ export class PageOrdersComponent implements OnInit {
   ngOnInit(): void {
     this.os.collection.subscribe(
       (datas) => {
-        this.collection = datas;
-        console.log(this.collection);
+        this.collection$.next(datas);
       }
     );
     // console.log(this.collection);
@@ -45,6 +45,15 @@ export class PageOrdersComponent implements OnInit {
     console.log('open popup');
   }
   public goToEdit(item: Order) {
-    this.router.navigate(['orders','edit', item.id]);
+    this.router.navigate(['orders', 'edit', item.id]);
+  }
+  public delete(item: Order) {
+    this.os.delete(item).subscribe((res) => {
+      this.os.collection.subscribe(
+        (datas) => {
+          this.collection$.next(datas);
+        }
+      );
+    });
   }
 }
