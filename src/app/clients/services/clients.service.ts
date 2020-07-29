@@ -36,6 +36,10 @@ public update(item: Client): Observable<Client> {
 return this.http.put<Client>(`${environment.urlApi}/clients/${item.id}`, item);
 }
 // add item in collection
+public addItem(item: Client): Observable<Client> {
+  // debugger;
+  return this.http.post<Client>(`${environment.urlApi}/clients`, item);
+}
 
 // delete item in collection
 

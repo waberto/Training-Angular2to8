@@ -1,0 +1,11 @@
+<app-template-one-col>
+  <app-text-bandeau class="title">
+    <h1>Add an Clients</h1>
+  </app-text-bandeau>
+
+  <ng-container class="contents">
+    <div class="container">
+      <app-form-client [initItem]="item" (submited)="addItem($event)"></app-form-client>
+    </div>
+  </ng-container>
+</app-template-one-col>

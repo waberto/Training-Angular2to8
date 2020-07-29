@@ -13,7 +13,7 @@ import { IconsModule } from '../icons/icons.module';
 @NgModule({
   declarations: [TotalPipe, StateDirective],
   imports: [
-CommonModule
+    CommonModule
   ],
   exports: [
     TemplatesModule,
